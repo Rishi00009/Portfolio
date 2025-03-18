@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { CssBaseline, Box } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import  Projects from "./components/Projects";
+import Resume from "./components/Resume";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-function App() {
+const theme = createTheme({
+  palette: {
+    mode: "dark",
+    primary: { main: "#FFD700" }, // Gold accent color
+    background: { default: "#000", paper: "#111" },
+    text: { primary: "#fff", secondary: "#ccc" },
+  },
+  typography: { fontFamily: "Poppins, sans-serif" },
+});
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box sx={{ backgroundColor: "background.default", color: "text.primary", minHeight: "100vh" }}>
+        <Navbar />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Resume />
+        <Contact />
+        <Footer />
+      </Box>
+    </ThemeProvider>
   );
 }
-
-export default App;
