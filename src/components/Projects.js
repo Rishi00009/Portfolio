@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, Typography, Grid, Card, CardContent, CardMedia, Box } from "@mui/material";
 import { motion } from "framer-motion";
 
@@ -6,13 +7,13 @@ const projects = [
     title: "To-Do List App",
     description: "A simple and efficient to-do list app built with React and local storage.",
     image: "https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938726.jpg?t=st=1742295520~exp=1742299120~hmac=1a589214a5ea3ba2a6b1f804644135d8536352289b425575dd54eb492a484aaf&w=1380",
-    link: "https://rishimytodos.netlify.app/", // Link to your To-Do List App
+    link: "https://rishimytodos.netlify.app/",
   },
   {
     title: "Food Delivery System",
     description: "An online food ordering system built with MERN and Razorpay.",
     image: "https://img.freepik.com/premium-vector/trendy-minimalistic-food-delivery-service-online-food-order-application-banner-design-template_420121-273.jpg",
-    link: "https://restaurant-rishi.netlify.app/menu/676f8b110a445b665a943024",
+    link: "https://restaurant-rishi.netlify.app/",
   },
   {
     title: "Weather App",
@@ -26,7 +27,7 @@ export default function Projects() {
   return (
     <Box 
       id="projects" 
-      sx={{ backgroundColor: "#111", color: "#FFD700", py: 8, px: 2 }}
+      sx={{ backgroundColor: "#1A1A1A", color: "#00BCD4", py: 8, px: 2 }}
     >
       <Container>
         <motion.div 
@@ -51,11 +52,11 @@ export default function Projects() {
                 <Card 
                   sx={{ 
                     backgroundColor: "#222", 
-                    color: "#FFD700", 
-                    boxShadow: "0px 4px 15px rgba(255, 215, 0, 0.3)", 
+                    color: "#00BCD4", 
+                    boxShadow: "0px 4px 15px rgba(0, 188, 212, 0.3)", 
                     borderRadius: 2,
                     transition: "0.3s",
-                    "&:hover": { boxShadow: "0px 6px 20px rgba(255, 215, 0, 0.5)" },
+                    "&:hover": { boxShadow: "0px 6px 20px rgba(0, 188, 212, 0.5)" },
                     cursor: "pointer"
                   }}
                   onClick={() => window.open(project.link, "_blank")}

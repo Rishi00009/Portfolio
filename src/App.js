@@ -5,17 +5,17 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import  Projects from "./components/Projects";
+import Projects from "./components/Projects";
 import Resume from "./components/Resume";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
-    primary: { main: "#FFD700" }, // Gold accent color
-    background: { default: "#000", paper: "#111" },
-    text: { primary: "#fff", secondary: "#ccc" },
+    mode: "light",
+    primary: { main: "#009688" }, // Teal accent color
+    background: { default: "#f5f5f5", paper: "#fff" }, // Light background
+    text: { primary: "#333", secondary: "#555" }, // Darker text for readability
   },
   typography: { fontFamily: "Poppins, sans-serif" },
 });

@@ -5,11 +5,12 @@ export default function Footer() {
     <Box 
       component="footer" 
       sx={{ 
-        backgroundColor: "#000", 
-        color: "#FFD700", 
+        backgroundColor: "#020c1b",  // Dark background
+        color: "#64FFDA",  // Accent color
         textAlign: "center", 
         py: 2, 
-        mt: 5 
+        mt: 5,
+        borderTop: "1px solid #64FFDA", // Subtle border effect
       }}
     >
       <Typography variant="body2">
