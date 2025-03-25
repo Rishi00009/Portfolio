@@ -23,8 +23,8 @@ export default function Resume() {
             fontWeight: "bold",
             "&:hover": { backgroundColor: "#52E0C4" }
           }}
-          href="path-to-your-resume.pdf" 
-          download
+          href="/Rishi Resume.pdf"  // ✅ This links to your resume in the public folder
+          download="Rishi_M_Resume.pdf"
         >
           Download Resume
         </Button>

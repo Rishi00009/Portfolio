@@ -27,7 +27,7 @@ export default function Projects() {
   return (
     <Box 
       id="projects" 
-      sx={{ backgroundColor: "#1A1A1A", color: "#00BCD4", py: 8, px: 2 }}
+      sx={{ backgroundColor: "#1e1716", color: "#1e1716", py: 8, px: 2 }} // Dark purple background with soft pink text
     >
       <Container>
         <motion.div 
@@ -39,7 +39,7 @@ export default function Projects() {
             variant="h4" 
             textAlign="center" 
             fontWeight="bold" 
-            sx={{ mb: 5, textTransform: "uppercase", letterSpacing: 1 }}
+            sx={{ mb: 5, textTransform: "uppercase", letterSpacing: 1, color: "#abb933" }} // Light pink heading
           >
             My Projects
           </Typography>
@@ -51,12 +51,12 @@ export default function Projects() {
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Card 
                   sx={{ 
-                    backgroundColor: "#222", 
-                    color: "#00BCD4", 
-                    boxShadow: "0px 4px 15px rgba(0, 188, 212, 0.3)", 
+                    backgroundColor: "#25261e",  // Lighter purple for contrast
+                    color: "#E1BEE7", 
+                    boxShadow: "0px 4px 15px rgba(225, 190, 231, 0.3)", 
                     borderRadius: 2,
                     transition: "0.3s",
-                    "&:hover": { boxShadow: "0px 6px 20px rgba(0, 188, 212, 0.5)" },
+                    "&:hover": { boxShadow: "0px 6px 20px rgba(225, 190, 231, 0.5)" },
                     cursor: "pointer"
                   }}
                   onClick={() => window.open(project.link, "_blank")}
@@ -69,8 +69,10 @@ export default function Projects() {
                     sx={{ objectFit: "cover" }}
                   />
                   <CardContent sx={{ textAlign: "center" }}>
-                    <Typography variant="h6" fontWeight="bold">{project.title}</Typography>
-                    <Typography variant="body2" sx={{ color: "#ddd", mt: 1 }}>
+                    <Typography variant="h6" fontWeight="bold" sx={{ color: "#FF80AB" }}>
+                      {project.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: "#F3E5F5", mt: 1 }}>
                       {project.description}
                     </Typography>
                   </CardContent>
@@ -83,3 +85,5 @@ export default function Projects() {
     </Box>
   );
 }
+
+
