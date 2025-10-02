@@ -21,13 +21,13 @@ export default function Contact() {
         </Typography>
 
         <Button
-  component="a"                // ✅ Make it behave as a link
-  href="mailto:rishirishim0@gmail.com"
-  startIcon={<EmailIcon />}
-  sx={buttonStyle("#64FFDA")}
->
-  rishirishim0@gmail.com
-</Button>
+          component="a"                // ✅ Make it behave as a link
+          href="mailto:rishirishim0@gmail.com"
+          startIcon={<EmailIcon />}
+          sx={buttonStyle("#64FFDA")}
+        >
+          rishirishim0@gmail.com
+        </Button>
 
 
         <Stack direction="row" spacing={3} justifyContent="center" sx={{ mt: 6 }}>

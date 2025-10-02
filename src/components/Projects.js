@@ -10,15 +10,9 @@ const projects = [
     link: "https://rishimytodos.netlify.app/",
   },
   {
-    title: "Food Delivery System",
-    description: "An online food ordering system built with MERN and Razorpay.",
-    image: "https://img.freepik.com/premium-vector/trendy-minimalistic-food-delivery-service-online-food-order-application-banner-design-template_420121-273.jpg",
-    link: "https://restaurant-rishi.netlify.app/",
-  },
-  {
     title: "Weather App",
     description: "A React-based weather app using OpenWeather API.",
-    image: "https://img.freepik.com/free-vector/realistic-weather-widget_1284-4092.jpg",
+    image: "https://cdn.dribbble.com/userupload/12803821/file/original-5198e7dfd68dac50167ab568b6d209f0.jpg?format=webp&resize=1440x&vertical=center",
     link: "https://liveweathersiterishi.netlify.app/",
   }
 ];
