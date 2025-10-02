@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <Box
-    id="hero"
+      id="hero"
       sx={{
-        backgroundColor: "#020c1b", // Updated dark blue theme for consistency
-        color: "#64FFDA", // Updated primary text color to match theme
-        height: "90vh", // Increased height for a fuller hero section
+        backgroundColor: "#000000", // Deep black background
+        color: "#FFFFFF",           // White text
+        height: "90vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -20,11 +20,12 @@ export default function Hero() {
       }}
     >
       <Container maxWidth="md">
+        {/* Greeting */}
         <Typography variant="h3" fontWeight="bold">
-          Hi, I'm{" "}
-          <span style={{ color: "#64FFDA" }}>
+          Hello, I'm{" "}
+          <span style={{ color: "#FFFFFF" }}>
             <Typewriter
-              words={["Rishi M", "a MERN Stack Developer", "a Passionate Coder"]}
+              words={["Rishi M", "a MERN Stack Developer", "a Full-Stack Enthusiast"]}
               loop={0}
               cursor
               cursorStyle="|"
@@ -35,36 +36,37 @@ export default function Hero() {
           </span>
         </Typography>
 
-        <Typography variant="h5" sx={{ mt: 2, color: "#CCD6F6" }}>
-          I specialize in building modern and scalable web applications using the MERN stack.
+        {/* Professional Tagline */}
+        <Typography variant="h5" sx={{ mt: 2, color: "#E0E0E0" }}>
+          Crafting scalable, responsive, and efficient web applications with the MERN stack.
         </Typography>
 
-        <Typography variant="body1" sx={{ mt: 2, color: "#8892B0" }}>
-          Skilled in frontend and backend development, I love creating high-performance, responsive, and user-friendly web applications. 
-          Let's build something amazing together!
+        {/* Short Intro */}
+        <Typography variant="body1" sx={{ mt: 2, color: "#B0B0B0" }}>
+          I focus on building professional, high-performance applications that deliver
+          seamless user experiences. Let's collaborate to bring innovative ideas to life.
         </Typography>
 
-        {/* Animated Resume & Contact Buttons */}
+        {/* Call-to-Action Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          style={{ marginTop: "20px" }}
+          style={{ marginTop: "25px" }}
         >
-          
-
           <Button
             variant="outlined"
             sx={{
-              color: "#64FFDA",
-              borderColor: "#64FFDA",
+              color: "#FFFFFF",
+              borderColor: "#FFFFFF",
               fontWeight: "bold",
-              mx: 1,
-              "&:hover": { backgroundColor: "#64FFDA", color: "#020c1b" },
+              px: 4,
+              py: 1.5,
+              "&:hover": { backgroundColor: "#FFFFFF", color: "#000000" },
             }}
             href="#contact"
           >
-            Contact Me
+            Get In Touch
           </Button>
         </motion.div>
       </Container>

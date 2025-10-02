@@ -5,23 +5,24 @@ import { FaReact, FaNodeJs, FaDatabase, FaCss3Alt, FaJs, FaGitAlt, FaBootstrap, 
 import { SiNetlify, SiMysql, SiRedux, SiExpress } from "react-icons/si"; 
 
 const skills = [
-  { name: "HTML5", icon: <FaHtml5 color="#FF5733" size={35} />, glowColor: "#FF5733" },
-  { name: "CSS3", icon: <FaCss3Alt color="#007FFF" size={35} />, glowColor: "#007FFF" },
-  { name: "React.js", icon: <FaReact color="#61DBFB" size={35} />, glowColor: "#61DBFB" },
-  { name: "Redux", icon: <SiRedux color="#764ABC" size={35} />, glowColor: "#764ABC" },
-  { name: "Node.js", icon: <FaNodeJs color="#3C873A" size={35} />, glowColor: "#3C873A" },
-  { name: "Express.js", icon: <SiExpress color="#AAA" size={35} />, glowColor: "#AAA" },
-  { name: "MongoDB", icon: <FaDatabase color="#4DB33D" size={35} />, glowColor: "#4DB33D" },
-  { name: "SQL", icon: <SiMysql color="#00758F" size={35} />, glowColor: "#00758F" },
-  { name: "JavaScript (ES6+)", icon: <FaJs color="#F7E018" size={33} />, glowColor: "#F7E018" },
-  { name: "Bootstrap / Reactstrap", icon: <FaBootstrap color="#7952B3" size={35} />, glowColor: "#7952B3" },
-  { name: "Git & GitHub", icon: <FaGitAlt color="#F14E32" size={35} />, glowColor: "#F14E32" },
-  { name: "Netlify", icon: <SiNetlify color="#00C7B7" size={35} />, glowColor: "#00C7B7" }
+  { name: "HTML5", icon: <FaHtml5 size={35} /> },
+  { name: "CSS3", icon: <FaCss3Alt size={35} /> },
+  { name: "React.js", icon: <FaReact size={35} /> },
+  { name: "Redux", icon: <SiRedux size={35} /> },
+  { name: "Node.js", icon: <FaNodeJs size={35} /> },
+  { name: "Express.js", icon: <SiExpress size={35} /> },
+  { name: "MongoDB", icon: <FaDatabase size={35} /> },
+  { name: "SQL", icon: <SiMysql size={35} /> },
+  { name: "JavaScript (ES6+)", icon: <FaJs size={33} /> },
+  { name: "Bootstrap / Reactstrap", icon: <FaBootstrap size={35} /> },
+  { name: "Git & GitHub", icon: <FaGitAlt size={35} /> },
+  { name: "Netlify", icon: <SiNetlify size={35} /> }
 ];
 
 export default function Skills() {
   return (
-    <Box id="skills" sx={{ backgroundColor: "#1A1A1A", color: "#FFD700", py: 8 }}>
+    <Box id="skills" sx={{ backgroundColor: "#000000ff", color: "#FFF", py: 8 }}> 
+      {/* Grey background (#2E2E2E) */}
       <Container>
         <motion.div 
           initial={{ opacity: 0, y: 50 }} 
@@ -32,7 +33,7 @@ export default function Skills() {
             variant="h4" 
             textAlign="center" 
             fontWeight="bold" 
-            sx={{ mb: 5, textTransform: "uppercase", letterSpacing: 1, color: "#00BCD4" }}
+            sx={{ mb: 5, textTransform: "uppercase", letterSpacing: 1, color: "#FFF" }}
           >
             🛠️ Skills
           </Typography>
@@ -41,27 +42,28 @@ export default function Skills() {
         <Grid container spacing={3} justifyContent="center">
           {skills.map((skill, index) => (
             <Grid item xs={6} sm={4} md={2} key={index}>
-              <motion.div whileHover={{ scale: 1.02 }}>
+              <motion.div whileHover={{ scale: 1.05 }}>
                 <Paper 
                   elevation={4} 
                   sx={{ 
-                    backgroundColor: "#222", 
-                    color: "#FFD700", 
+                    backgroundColor: "#3A3A3A", // Darker grey card
+                    color: "#FFF", 
                     p: 2.5, 
                     textAlign: "center", 
                     borderRadius: 2, 
                     transition: "0.3s",
-                    border: `1px solid ${skill.glowColor}`,
-                    boxShadow: `0 0 6px ${skill.glowColor}`, // Softer neon glow
+                    border: "1px solid #FFF",
+                    boxShadow: "0 0 6px rgba(255,255,255,0.3)", 
                     "&:hover": { 
-                      backgroundColor: "#2A2A2A",
-                      boxShadow: `0 0 12px ${skill.glowColor}`, // Light glow on hover
-                      transform: "scale(1.02)"
+                      backgroundColor: "#FFF",
+                      color: "#000", // text turns black on hover
+                      boxShadow: "0 0 20px rgba(255,255,255,0.9)", // white neon glow
+                      transform: "scale(1.05)"
                     }
                   }}
                 >
                   {skill.icon}
-                  <Typography variant="body2" sx={{ mt: 1, fontWeight: "bold", color: "#FFF" }}> 
+                  <Typography variant="body2" sx={{ mt: 1, fontWeight: "bold" }}> 
                     {skill.name}
                   </Typography>
                 </Paper>

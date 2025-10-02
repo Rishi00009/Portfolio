@@ -5,25 +5,25 @@ export default function Resume() {
   return (
     <Box 
       id="resume" 
-      sx={{ py: 5, textAlign: "center", backgroundColor: "#020c1b", width: "100%" }}
+      sx={{ py: 5, textAlign: "center", backgroundColor: "#000000", width: "100%" }} // ✅ Pure black background
     >
       <Container maxWidth={false} disableGutters>
         <Typography 
           variant="h3" 
-          sx={{ fontWeight: "bold", color: "#64FFDA" }}
+          sx={{ fontWeight: "bold", color: "#ffffff" }} // ✅ White text for better readability
         >
           📜 My Resume
         </Typography>
         <Button
           variant="contained"
           sx={{ 
-            backgroundColor: "#64FFDA", 
-            color: "#020c1b", 
+            backgroundColor: "#ffffff",   // ✅ White button for contrast
+            color: "#000000",             // ✅ Black text inside button
             mt: 3,
             fontWeight: "bold",
-            "&:hover": { backgroundColor: "#52E0C4" }
+            "&:hover": { backgroundColor: "#e0e0e0" } // ✅ Softer hover effect
           }}
-          href="/Rishi Resume.pdf"  // ✅ This links to your resume in the public folder
+          href="/Rishi Resume.pdf"  // ✅ Resume in public folder
           download="Rishi_M_Resume.pdf"
         >
           Download Resume

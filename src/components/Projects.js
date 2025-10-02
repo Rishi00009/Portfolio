@@ -6,7 +6,7 @@ const projects = [
   {
     title: "To-Do List App",
     description: "A simple and efficient to-do list app built with React and local storage.",
-    image: "https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938726.jpg?t=st=1742295520~exp=1742299120~hmac=1a589214a5ea3ba2a6b1f804644135d8536352289b425575dd54eb492a484aaf&w=1380",
+    image: "https://img.freepik.com/free-photo/flat-lay-notebook-with-list-desk_23-2148938726.jpg",
     link: "https://rishimytodos.netlify.app/",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
   {
     title: "Weather App",
     description: "A React-based weather app using OpenWeather API.",
-    image: "https://img.freepik.com/free-vector/realistic-weather-widget_1284-4092.jpg?t=st=1742296122~exp=1742299722~hmac=be4533f16e6d713acb269f3af011f37e55a1d39646cc05a100cf807b0cb7134c&w=826",
+    image: "https://img.freepik.com/free-vector/realistic-weather-widget_1284-4092.jpg",
     link: "https://liveweathersiterishi.netlify.app/",
   }
 ];
@@ -27,7 +27,7 @@ export default function Projects() {
   return (
     <Box 
       id="projects" 
-      sx={{ backgroundColor: "#1e1716", color: "#1e1716", py: 8, px: 2 }} // Dark purple background with soft pink text
+      sx={{ backgroundColor: "#1b1a1aff", color: "#FFF", py: 8, px: 2 }} // Grey background
     >
       <Container>
         <motion.div 
@@ -39,7 +39,7 @@ export default function Projects() {
             variant="h4" 
             textAlign="center" 
             fontWeight="bold" 
-            sx={{ mb: 5, textTransform: "uppercase", letterSpacing: 1, color: "#abb933" }} // Light pink heading
+            sx={{ mb: 5, textTransform: "uppercase", letterSpacing: 1, color: "#FFF" }}
           >
             My Projects
           </Typography>
@@ -51,13 +51,17 @@ export default function Projects() {
               <motion.div whileHover={{ scale: 1.05 }}>
                 <Card 
                   sx={{ 
-                    backgroundColor: "#25261e",  // Lighter purple for contrast
-                    color: "#E1BEE7", 
-                    boxShadow: "0px 4px 15px rgba(225, 190, 231, 0.3)", 
+                    backgroundColor: "#3A3A3A",  // Dark grey card
+                    color: "#FFF", 
+                    boxShadow: "0 0 6px rgba(255,255,255,0.2)", 
                     borderRadius: 2,
                     transition: "0.3s",
-                    "&:hover": { boxShadow: "0px 6px 20px rgba(225, 190, 231, 0.5)" },
-                    cursor: "pointer"
+                    cursor: "pointer",
+                    "&:hover": { 
+                      backgroundColor: "#FFF",
+                      color: "#000",
+                      boxShadow: "0 0 20px rgba(255,255,255,0.9)" // White neon glow
+                    }
                   }}
                   onClick={() => window.open(project.link, "_blank")}
                 >
@@ -69,10 +73,10 @@ export default function Projects() {
                     sx={{ objectFit: "cover" }}
                   />
                   <CardContent sx={{ textAlign: "center" }}>
-                    <Typography variant="h6" fontWeight="bold" sx={{ color: "#FF80AB" }}>
+                    <Typography variant="h6" fontWeight="bold">
                       {project.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: "#F3E5F5", mt: 1 }}>
+                    <Typography variant="body2" sx={{ mt: 1 }}>
                       {project.description}
                     </Typography>
                   </CardContent>
@@ -85,5 +89,3 @@ export default function Projects() {
     </Box>
   );
 }
-
-
