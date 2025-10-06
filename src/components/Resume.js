@@ -23,7 +23,7 @@ export default function Resume() {
             fontWeight: "bold",
             "&:hover": { backgroundColor: "#e0e0e0" } // ✅ Softer hover effect
           }}
-          href="/Rishi Resume.pdf"  // ✅ Resume in public folder
+          href="/Rishi resume.pdf"  // ✅ Resume in public folder
           download="Rishi_M_Resume.pdf"
         >
           Download Resume
